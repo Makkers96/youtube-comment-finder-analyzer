@@ -18,9 +18,9 @@ for vid_id, comments in comments_dictionary.items():
 @app.route("/", methods=["GET", "POST"])
 def google_test():
 
-    print(f"Current length of comments_dictionary:{comments_dictionary}")
-    print(f"Current length of list_of_vid_ids:{list_of_vid_ids}")
-    print(f"Current length of analyzed_comments:{analyzed_comments}")
+    print(f"Current length of comments_dictionary:{len(comments_dictionary)}")
+    print(f"Current length of list_of_vid_ids:{len(list_of_vid_ids)}")
+    print(f"Current length of analyzed_comments:{len(analyzed_comments)}")
 
     if request.method == 'POST':
         if "Analyze" in request.form:
